@@ -7,4 +7,8 @@ describe('Should render correctly', () => {
         const wrapper = render(<WeatherCurrent />)
         wrapper.getByTestId('weather-current')
     })
+
+    test('Should navigate to screen with location', () => {
+        throw new Error('Test not implemented')
+    })
 })
