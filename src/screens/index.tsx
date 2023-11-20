@@ -6,7 +6,7 @@ import WeatherScreen from './WeatherScreen';
 
 export type RootStackParamList = {
   Home: undefined;
-  Weather: { latitude: number, longitude: number } | undefined
+  Weather: { latitude: number, longitude: number }
 }
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>

@@ -24,7 +24,7 @@ describe('AppNavigator', () => {
             const navigation = useNavigation<HomeScreenNavigationProp>()
 
             useEffect(() => {
-                navigation.navigate('Weather')
+                navigation.navigate('Weather', { latitude: 0, longitude: 0 })
             }, [navigation])
 
             return null
