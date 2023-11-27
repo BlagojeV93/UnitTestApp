@@ -16,11 +16,11 @@ const WeatherCurrent = (props: WeatherCurrentProps) => {
 
     const handleFetchPostion = useCallback(async () => {
         try {
-            setError(false)
+            // setError(false)
             setLoading(true);
             const position = await LocationService.getCurrentPosition();
             navigation.navigate('Weather', position)
-        } catch (error) { 
+        } catch (e) {
             setError(true)
         }
         setLoading(false)
@@ -32,7 +32,7 @@ const WeatherCurrent = (props: WeatherCurrentProps) => {
             label='Weather at my position'
             testID='weather-current'
             loading={loading}
-            style={error && styles.error}
+            style={error ? styles.error : {}}
         />
     )
 }

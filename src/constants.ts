@@ -5,5 +5,6 @@ export enum Colors {
     WHITE = '#ffffff',
     LIGHTER_GRAY = '#73767F',
     DARK_GRAY = '#595C66',
-    ERROR = '#B000020'
+    ERROR = '#B00020',
+    TRANSPARENT = 'transparent'
 }

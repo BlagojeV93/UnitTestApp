@@ -92,6 +92,7 @@ describe('Should render correctly', () => {
             })
         })
 
+        // passes regardless the implementation ???
         test('Shoud remove error style when fetch position is triggered again', async () => {
             jest.spyOn(LocationService, 'getCurrentPosition')
                 .mockRejectedValueOnce(new Error(''));
@@ -103,7 +104,7 @@ describe('Should render correctly', () => {
             await waitFor(() => {
                 fireEvent.press(button);
                 expect(button).not.toHaveStyle({ borderColor: Colors.ERROR })
-            })
+            });
         })
     })
 })
