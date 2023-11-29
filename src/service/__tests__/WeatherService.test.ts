@@ -1,4 +1,4 @@
-import { WeaterType } from "../../types/Weather"
+import { WeatherType } from "../../types/Weather"
 import nock from 'nock'
 import { CurrentWeatherRawResponseDto, nullCurrentWeatherRawResponse } from "../dto/weather-service.dto"
 import WeatherService from "../WeatherService"
@@ -23,7 +23,7 @@ describe('WeatherService', () => {
     }
 
     test('Should return formatted current weather data from API', async () => {
-        const expectedWeather: WeaterType = {
+        const expectedWeather: WeatherType = {
             temperature: 10,
             humidity: 100,
             pressure: 1000,

@@ -1,9 +1,9 @@
 import axios, { AxiosResponse } from "axios";
-import { WeaterType } from "../types/Weather";
+import { WeatherType } from "../types/Weather";
 import { CurrentWeatherRawResponseDto } from "./dto/weather-service.dto";
 
 class WeatherService {
-    static async fetchCurrentWeather(lat: number, lon: number): Promise<WeaterType> {
+    static async fetchCurrentWeather(lat: number, lon: number): Promise<WeatherType> {
         return axios.get<CurrentWeatherRawResponseDto>('https://api.openweathermap.org/data/2.5/weather', {
             params: {
                 lat,
@@ -14,7 +14,7 @@ class WeatherService {
         }).then(WeatherService.formatCurrentWeatherResponse)
     }
 
-    static async formatCurrentWeatherResponse(response: AxiosResponse<CurrentWeatherRawResponseDto>): Promise<WeaterType> {
+    static async formatCurrentWeatherResponse(response: AxiosResponse<CurrentWeatherRawResponseDto>): Promise<WeatherType> {
         const { data } = response
         const weather = data.weather[0]
         return {

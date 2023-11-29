@@ -1,4 +1,4 @@
-export type WeaterType = {
+export type WeatherType = {
     temperature: number;
     windSpeed: number;
     humidity: number;
@@ -8,7 +8,7 @@ export type WeaterType = {
     city: string;
 }
 
-export const nullWeather: WeaterType = {
+export const nullWeather: WeatherType = {
     temperature: 0,
     windSpeed: 0,
     humidity: 0,
