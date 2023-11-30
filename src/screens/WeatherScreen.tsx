@@ -60,7 +60,7 @@ const WeatherScreen = (props: Props) => {
                         <View
                             testID='weather-temperature-container'
                             style={[styles.card, styles.cardNegative]}>
-                            <Text style={styles.cardTextNegative}>temperature</Text>
+                            <Text style={styles.cardTextNegative}>Temperature</Text>
                             <Text style={styles.cardTextNegative}>
                                 {Math.round(temperature)}°C
                             </Text>
@@ -68,7 +68,7 @@ const WeatherScreen = (props: Props) => {
                         <View
                             testID='weather-windspeed-container'
                             style={styles.card}>
-                            <Text style={styles.cardText}>wind</Text>
+                            <Text style={styles.cardText}>Wind</Text>
                             <Text style={styles.cardText}>
                                 {windSpeed}m/s
                             </Text>
@@ -76,7 +76,7 @@ const WeatherScreen = (props: Props) => {
                         <View
                             testID='weather-humidity-container'
                             style={[styles.card, styles.cardNegative]}>
-                            <Text style={styles.cardTextNegative}>humidity</Text>
+                            <Text style={styles.cardTextNegative}>Humidity</Text>
                             <Text style={styles.cardTextNegative}>
                                 {humidity}%
                             </Text>
@@ -84,7 +84,7 @@ const WeatherScreen = (props: Props) => {
                         <View
                             testID='weather-pressure-container'
                             style={styles.card}>
-                            <Text style={styles.cardText}>pressure</Text>
+                            <Text style={styles.cardText}>Pressure</Text>
                             <Text style={styles.cardText}>
                                 {pressure} hPa
                             </Text>
@@ -148,11 +148,9 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.BLUE
     },
     cardTextNegative: {
-        color: Colors.WHITE,
-        textTransform: 'capitalize'
+        color: Colors.WHITE
     },
     cardText: {
-        textTransform: 'capitalize',
         color: Colors.LIGHTER_GRAY
     }
 })

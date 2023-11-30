@@ -122,7 +122,7 @@ describe('Should render correctly', () => {
         })
 
         const container = wrapper.getByTestId('weather-temperature-container')
-        const title = wrapper.getByText('temperature')
+        const title = wrapper.getByText('Temperature')
         const temperature = wrapper.getByText('11°C')
 
         expect(container).toContainElement(title)
@@ -138,7 +138,7 @@ describe('Should render correctly', () => {
         })
 
         const container = wrapper.getByTestId('weather-windspeed-container')
-        const title = wrapper.getByText('wind')
+        const title = wrapper.getByText('Wind')
         const widnspeed = wrapper.getByText('20m/s')
 
         expect(container).toContainElement(title)
@@ -154,7 +154,7 @@ describe('Should render correctly', () => {
         })
 
         const container = wrapper.getByTestId('weather-humidity-container')
-        const title = wrapper.getByText('humidity')
+        const title = wrapper.getByText('Humidity')
         const humidity = wrapper.getByText('10%')
 
         expect(container).toContainElement(title)
@@ -170,7 +170,7 @@ describe('Should render correctly', () => {
         })
 
         const container = wrapper.getByTestId('weather-pressure-container')
-        const title = wrapper.getByText('pressure')
+        const title = wrapper.getByText('Pressure')
         const pressure = wrapper.getByText('1000 hPa')
 
         expect(container).toContainElement(title)
