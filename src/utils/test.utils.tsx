@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react'
-import { createStore } from "redux";
-import rootReducer from "../store/reducers";
+import { Middleware, applyMiddleware, createStore } from "redux";
+import rootReducer, { StateType } from "../store/reducers";
 import { RenderOptions, render } from "@testing-library/react-native";
 import { Provider } from 'react-redux';
 import { runSaga } from 'redux-saga';
@@ -11,6 +11,14 @@ type Action = {
 }
 
 const store = createStore(rootReducer)
+
+export function mockStore(interceptor?: jest.Mock) {
+    const logger: Middleware<{}, StateType> = () => (next) => (action) => {
+        interceptor?.(action);
+        return next(action)
+    }
+    return createStore(rootReducer, undefined, applyMiddleware(logger))
+}
 
 export async function recordSaga(worker: any, initialAction: Action) {
     const dispatched: Array<Function> = []

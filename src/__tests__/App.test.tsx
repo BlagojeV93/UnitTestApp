@@ -25,9 +25,9 @@ describe('App', () => {
 
     test('Should render provider', () => {
         let providerStore!: typeof store;
-        (Provider as jest.Mock).mockImplementationOnce((store) => {
+        (Provider as jest.Mock).mockImplementationOnce(({ store }) => {
             providerStore = store;
-            return <View testID='mock-provider' />;
+            return <View testID='mock-provider' />
         });
 
         const wrapper = render(<App />);

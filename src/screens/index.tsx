@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import HomeScreen from './HomeScreen';
@@ -10,6 +10,7 @@ export type RootStackParamList = {
 }
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>
+export type WeatherScreenRouteProp = RouteProp<RootStackParamList, 'Weather'>
 
 const RootStack = createNativeStackNavigator<RootStackParamList>()
 

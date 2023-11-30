@@ -9,7 +9,7 @@ class WeatherService {
                 lat,
                 lon,
                 appid: 'dbd8e342bfab630f29af9792b1c5448b',
-                unit: 'metric'
+                units: 'metric'
             }
         }).then(WeatherService.formatCurrentWeatherResponse)
     }
@@ -24,7 +24,7 @@ class WeatherService {
             pressure: data.main.pressure,
             description: weather?.description ?? null,
             city: data.name,
-            icon: weather ? `http://opemweathermap.org/img/wn/${weather.icon}@4x.ong` : null
+            icon: weather ? `https://openweathermap.org/img/wn/${weather.icon}@4x.png` : null
         }
     }
 }
