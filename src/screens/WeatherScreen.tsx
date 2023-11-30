@@ -70,7 +70,7 @@ const WeatherScreen = (props: Props) => {
                             style={styles.card}>
                             <Text style={styles.cardText}>Wind</Text>
                             <Text style={styles.cardText}>
-                                {windSpeed}m/s
+                                {windSpeed} m/s
                             </Text>
                         </View>
                         <View

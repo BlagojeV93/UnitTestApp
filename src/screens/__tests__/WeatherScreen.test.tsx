@@ -139,7 +139,7 @@ describe('Should render correctly', () => {
 
         const container = wrapper.getByTestId('weather-windspeed-container')
         const title = wrapper.getByText('Wind')
-        const widnspeed = wrapper.getByText('20m/s')
+        const widnspeed = wrapper.getByText('20 m/s')
 
         expect(container).toContainElement(title)
         expect(container).toContainElement(widnspeed)
